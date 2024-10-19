@@ -1,0 +1,55 @@
+.indian-food-container {
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.recipe-content {
+    padding: 16px;
+}
+
+.recipe-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.recipe-desc {
+    font-size: 1rem;
+    color: #666;
+}
+
+.recipe-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.recipe-button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+}

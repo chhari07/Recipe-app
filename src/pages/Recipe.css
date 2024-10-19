@@ -1,82 +1,97 @@
-.recipe-container 
-{
+.recipe-container {
     display: flex;
-    text-align: justify;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+    text-align: center;
     gap: 20px;
 }
-.recipe-imgs 
-{
-    height: 300px;
-    width: 500px;
+
+.recipe-container-left,
+.recipe-container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering content within the column */
 }
-.instructions
-{
-    text-align: justify;
+
+.recipe-imgs {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
 }
-.btn-container
-{
+
+.btn-container {
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    justify-content: center; /* Centering buttons */
+    color: black;
 }
-.btn-container button 
-{
-    background-color: #202020;
-}
-.recipe-right-main
-{
+
+.recipe-right-main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    line-height: 30px;
 }
-.summary h2 
-{
+
+@media (max-width: 768px) {
+    .recipe-container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items vertically */
+    }
+}
+
+.ingredients-list, .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering content */
+    margin-top: 20px; /* Spacing from buttons */
+}
+
+.summary, .ingredients-list, .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering content */
+    width: 100%; /* Full width for section */
+    max-width: 500px; /* Maximum width */
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional border for separation */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px 0; /* Spacing between sections */
+}
+
+.ingredient-bar, .step {
+    display: flex;
+    justify-content: space-between; /* Space between name and amount */
+    width: 100%; /* Full width for ingredient bar */
+    max-width: 500px; /* Maximum width */
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional border for separation */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px 0; /* Spacing between ingredients or steps */
+}
+
+.ingredients-h3 {
+    display: flex;
+    justify-content: space-between; /* Space out name and amount */
+    width: 100%; /* Full width for heading */
+}
+.btn-container {
+    display: flex;
+    gap: 20px;
     margin-bottom: 20px;
+    justify-content: center; /* Centering buttons */
 }
-.instructions h2 
-{
-    margin-bottom: 20px;
+
+.btn-container button {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
 }
-.steps 
-{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.step 
-{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.recipe-shimmer-container
-{
-    display: flex;
-    gap: 20px;
-}
-.recipe-shimmer-left 
-{
-    width: 40%;
-} 
-.recipe-shimmer-right 
-{
-    width: 60%;
-    margin-top: 15px;
-}
-.btn-shimmer-right 
-{
-    display: flex;
-    gap: 30px;
-}
-.text-container-shimmer
-{
-    display: flex;
-    flex-direction: column;
-    gap: -20px;
-}
-.ingredients-h3
-{
-    display: flex;
-    justify-content: space-between;
+
+.btn-container button:hover {
+    background-color: #444; /* Slightly lighter on hover */
 }

@@ -1,31 +1,71 @@
-.header-container 
-{
-    margin: -50px -100px 30px;
-    padding:10px 20px;
-    background-color: #202020;
-    color:white;
+.header-container {
+    margin: 0 auto; /* Centering the header */
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 999;
     box-shadow: 0px 0px 3px 1px black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%; /* Ensures it doesn't overflow horizontally */
 }
-.header-container h1 
-{
-    font-family: 'Satisfy';
+
+/* Adjusting the header title */
+.header-container h1 {
+    font-family: 'Satisfy', cursive;
     display: flex;
     align-items: center;
     gap: 5px;
-    color:white;
+    color: white;
+    font-size: 2rem; /* Slightly larger for better visibility */
 }
-.header-container a 
-{
+
+.header-container a {
     text-decoration: none;
+    color: white;
 }
-.user-img
-{
+
+/* Adjusting the user icon */
+.user-img {
     font-size: 30px;
     cursor: pointer;
+}
+
+/* Tablet responsiveness */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        margin: 0; /* Removing negative margin to prevent issues */
+    }
+
+    .header-container h1 {
+        font-size: 1.6rem; /* Slightly smaller for tablets */
+        margin-bottom: 10px; /* Adding space between elements */
+    }
+
+    .user-img {
+        font-size: 25px; 
+    }
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 8px;
+        margin: 0; /* Ensure margin doesn't break layout on small screens */
+    }
+
+    .header-container h1 {
+        font-size: 1.4rem; /* Adjusted to fit better on mobile */
+    }
+
+    .user-img {
+        font-size: 22px; 
+    }
 }

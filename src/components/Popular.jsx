@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import RecipeCard from "./RecipeCard";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import './Popular.css';
@@ -11,7 +10,6 @@ const Popular = () => {
     const [popular, setPopular] = useState([]);
 
     const getPopular = async () => { 
-    
         const check = localStorage.getItem('popular');
 
         if(check) {
@@ -21,22 +19,26 @@ const Popular = () => {
             const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=10`);
             const data = await api.json();
             localStorage.setItem('popular', JSON.stringify(data.recipes));
-            console.log(data);
             setPopular(data?.recipes);  
         }
     }
 
     useEffect(() => {
         getPopular();
-    },[])
+    }, [])
 
-    if(popular.length === 0) {
+    if (popular.length === 0) {
         const number = [1,2,3,4,5,6,7,8,9,10];
         return (
             <Splide options= {{
                 perPage: 4,
+                breakpoints: {
+                    1024: { perPage: 3 },
+                    768: { perPage: 2 },
+                    480: { perPage: 1 },
+                },
                 pagination: false,
-                gap: '2rem'
+                gap: '1.5rem'
             }}>
                 {number.map((data) => (
                 <SplideSlide key={data} >
@@ -49,15 +51,27 @@ const Popular = () => {
 
     return (
         <div className="popular-container">
-            <h1>Popular </h1>
+            <h1 className=" font-extrabold text-4xl  mb-4   "  >Popular Recipes</h1>
             <Splide options={{
                 perPage: 4,
+                breakpoints: {
+                    1024: { perPage: 3 },
+                    768: { perPage: 2 },
+                    480: { perPage: 1 },
+                },
                 pagination: false,
-                gap: '2rem',
+                gap: '1.5rem',
             }}>
             {popular.map((recipe) => (
                 <SplideSlide key={recipe.id}>
-                    <RecipeCard data={recipe} />
+                    <div className="recipe-card">
+                        <div className="recipe-image" style={{ backgroundImage: `url(${recipe.image})` }}></div>
+                        <div className="recipe-content">
+                            <h5 className="recipe-title">{recipe.title}</h5>
+                            <p className="recipe-desc">A brief description of the recipe.</p>
+                            <button className="recipe-button">Read More</button>
+                        </div>
+                    </div>
                 </SplideSlide>
             ))}
             </Splide>

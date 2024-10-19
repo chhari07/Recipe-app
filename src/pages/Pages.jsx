@@ -6,6 +6,7 @@ import Search from "../components/Search";
 import Searched from "./Searched";
 import Recipe from "./Recipe";
 import Header from "../components/Header";
+import { Footer } from "../components/Fotter";
 
 const Pages = () => {
 
@@ -22,6 +23,7 @@ const Pages = () => {
                     <Route path="recipe/:name" element={<Recipe />}></Route>
                 </Routes>
             </div>
+            <Footer/>
         </Router>
     )
 }

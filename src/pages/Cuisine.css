@@ -1,18 +1,32 @@
-.cuisine-container 
-{
+.cuisine-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 10px;
     margin-top: 40px;
 }
-.cuisine-skeleton
-{
+
+.cuisine-skeleton {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 10px;
     margin-top: 40px;
 }
-.cuisine-skltn
-{
+
+.cuisine-skltn {
     border-radius: 20px;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (max-width: 768px) {
+    .cuisine-container,
+    .cuisine-skeleton {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Smaller cards for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .cuisine-container,
+    .cuisine-skeleton {
+        grid-template-columns: 1fr; /* Stack cards on top of each other on very small screens */
+    }
 }

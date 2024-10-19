@@ -317,9 +317,236 @@
                         }
                     ]
                 }
+
+                
             ]
-        }
+        },
+        {
+            "id": 637876,
+            "title": "Chicken 65",
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 2,
+            "gaps": "no",
+            "preparationMinutes": -1,
+            "cookingMinutes": -1,
+            "readyInMinutes": 45,
+            "servings": 6,
+            "aggregateLikes": 6,
+            "healthScore": 6,
+            "pricePerServing": 115.13,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "sourceUrl": "http://www.foodista.com/recipe/G4XPLKBW/chicken-65-chicken-marinaded-in-traditional-indian-spices-and-deep-fried",
+            "image": "https://spoonacular.com/recipeImages/637876-556x370.jpg",
+            "imageType": "jpg",
+            "summary": "Chicken 65 could be just the <b>gluten free</b> recipe you've been looking for. This hor d'oeuvre has <b>121 calories</b>, <b>19g of protein</b>, and <b>3g of fat</b> per serving. For <b>$1.15 per serving</b>, this recipe <b>covers 11%</b> of your daily requirements of vitamins and minerals. This recipe serves 6. Head to the store and pick up salt, chili powder, yogurt, and a few other things to make it today. 6 people have made this recipe and would make it again. It is brought to you by Foodista. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. Overall, this recipe earns a <b>not so spectacular spoonacular score of 39%</b>.",
+            "cuisines": [],
+            "dishTypes": [
+                "antipasti",
+                "starter",
+                "snack",
+                "appetizer",
+                "antipasto",
+                "hor d'oeuvre"
+            ],
+            "diets": [
+                "gluten free"
+            ],
+            "occasions": [],
+            "winePairing": {
+                "pairedWines": [
+                    "sparkling wine",
+                    "sparkling rose"
+                ],
+                "pairingText": "Sparkling Wine and Sparkling rosé are my top picks for Antipasti. If you're serving a selection of appetizers, you can't go wrong with these. Both are very food friendly and complement a variety of flavors. The Moet & Chandon White Star () with a 4.6 out of 5 star rating seems like a good match. It costs about 14 dollars per bottle.",
+                "productMatches": [
+                    {
+                        "id": 436684,
+                        "title": "Moet & Chandon White Star ()",
+                        "description": "White Star is a softer champagne. It is well balanced and harmonious, with subtle aromas of warm toast and gingerbread. The finish is sustained with a hint of honey.",
+                        "price": "$13.99",
+                        "imageUrl": "https://spoonacular.com/productImages/436684-312x231.jpg",
+                        "averageRating": 0.92,
+                        "ratingCount": 10,
+                        "score": 0.89,
+                        "link": "https://click.linksynergy.com/deeplink?id=*QCiIS6t4gA&mid=2025&murl=https%3A%2F%2Fwww.wine.com%2Fproduct%2Fmoet-and-chandon-white-star-187ml%2F25889"
+                    }
+                ]
+            },
+            "instructions": "<ol><li>Take a large bowl mix in the ginger and garlic paste, yogurt, red chilly powder, turmeric powder, and salt.</li><li>Mix well to form smooth and thick paste, add the chicken pieces to the masala paste and marinated for 4 hours.</li><li>Heat enough oil in a pan to deep fry the marinaded chicken pieces. Deep fry the chicken pieces in batches till crisp and golden color.</li><li>Note: The taste of the Chicken 65 depends mainly on the amount of time it gets marinated in the masala; it is best to marinate the chicken pieces the day before.</li></ol>",
+            "extendedIngredients": [
+                {
+                    "id": 5062,
+                    "aisle": "Meat",
+                    "image": "chicken-breasts.png",
+                    "consistency": "SOLID",
+                    "name": "chicken breast",
+                    "original": "500 grams boneless chicken breast",
+                    "amount": 500,
+                    "unit": "grams",
+                    "meta": ["boneless"],
+                    "measures": {
+                        "us": {
+                            "amount": 1.102,
+                            "unitShort": "lb",
+                            "unitLong": "pounds"
+                        },
+                        "metric": {
+                            "amount": 500,
+                            "unitShort": "g",
+                            "unitLong": "grams"
+                        }
+                    }
+                },
+                {
+                    "id": 2009,
+                    "aisle": "Spices and Seasonings",
+                    "image": "chili-powder.jpg",
+                    "consistency": "SOLID",
+                    "name": "chili powder",
+                    "original": "2-3 tsp chili powder",
+                    "amount": 2,
+                    "unit": "tsp",
+                    "measures": {
+                        "us": {
+                            "amount": 2,
+                            "unitShort": "tsps",
+                            "unitLong": "teaspoons"
+                        },
+                        "metric": {
+                            "amount": 2,
+                            "unitShort": "tsps",
+                            "unitLong": "teaspoons"
+                        }
+                    }
+                },
+                {
+                    "id": 10111215,
+                    "aisle": "Ethnic Foods",
+                    "image": "garlic-paste.png",
+                    "consistency": "SOLID",
+                    "name": "ginger and garlic paste",
+                    "original": "4 tbsp Ginger and Garlic paste",
+                    "amount": 4,
+                    "unit": "tbsp",
+                    "measures": {
+                        "us": {
+                            "amount": 4,
+                            "unitShort": "Tbsps",
+                            "unitLong": "Tbsps"
+                        },
+                        "metric": {
+                            "amount": 4,
+                            "unitShort": "Tbsps",
+                            "unitLong": "Tbsps"
+                        }
+                    }
+                },
+                {
+                    "id": 2047,
+                    "aisle": "Spices and Seasonings",
+                    "image": "salt.jpg",
+                    "consistency": "SOLID",
+                    "name": "salt",
+                    "original": "½ tbsp. salt",
+                    "amount": 0.5,
+                    "unit": "tbsp",
+                    "measures": {
+                        "us": {
+                            "amount": 0.5,
+                            "unitShort": "Tbsps",
+                            "unitLong": "Tbsps"
+                        },
+                        "metric": {
+                            "amount": 0.5,
+                            "unitShort": "Tbsps",
+                            "unitLong": "Tbsps"
+                        }
+                    }
+                },
+                {
+                    "id": 2043,
+                    "aisle": "Spices and Seasonings",
+                    "image": "turmeric.jpg",
+                    "consistency": "SOLID",
+                    "name": "turmeric powder",
+                    "original": "1/4 tsp Turmeric powder",
+                    "amount": 0.25,
+                    "unit": "tsp",
+                    "measures": {
+                        "us": {
+                            "amount": 0.25,
+                            "unitShort": "tsps",
+                            "unitLong": "teaspoons"
+                        },
+                        "metric": {
+                            "amount": 0.25,
+                            "unitShort": "tsps",
+                            "unitLong": "teaspoons"
+                        }
+                    }
+                },
+                {
+                    "id": 1116,
+                    "aisle": "Milk, Eggs, Other Dairy",
+                    "image": "plain-yogurt.jpg",
+                    "consistency": "SOLID",
+                    "name": "yogurt",
+                    "original": "4 tbsp yogurt",
+                    "amount": 4,
+                    "unit": "tbsp",
+                    "measures": {
+                        "us": {
+                            "amount": 4,
+                            "unitShort": "Tbsps",
+                            "unitLong": "Tbsps"
+                        },
+                        "metric": {
+                            "amount": 4,
+                            "unitShort": "Tbsps",
+                            "unitLong": "Tbsps"
+                        }
+                    }
+                }
+            ],
+            "analyzedInstructions": [
+                {
+                    "steps": [
+                        {
+                            "number": 1,
+                            "step": "Take a large bowl mix in the ginger and garlic paste, yogurt, red chilly powder, turmeric powder, and salt.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 2,
+                            "step": "Mix well to form smooth and thick paste, add the chicken pieces to the masala paste and marinated for 4 hours.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 3,
+                            "step": "Heat enough oil in a pan to deep fry the marinaded chicken pieces. Deep fry the chicken pieces in batches till crisp and golden color.",
+                            "ingredients": [],
+                            "equipment": []
+                        },
+                        {
+                            "number": 4,
+                            "step": "Note: The taste of the Chicken 65 depends mainly on the amount of time it gets marinated in the masala; it is best to marinate the chicken pieces the day before.",
+                            "ingredients": [],
+                            "equipment": []
+                        }
     ],
     "originalId": null,
     "spoonacularSourceUrl": "https://spoonacular.com/chicken-65-637876"
-}
+}]}]}
+

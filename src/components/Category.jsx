@@ -6,6 +6,10 @@ import './Category.css'
 const Category = () => {
     return (
         <div className="category-container">
+            <NavLink to={'/cuisine/Indian'}>
+                <GiChopsticks />
+                <p>Indian</p>
+            </NavLink>
             <NavLink to={'/cuisine/Italian'}>
                 <FaPizzaSlice />
                 <p>Italian</p>
