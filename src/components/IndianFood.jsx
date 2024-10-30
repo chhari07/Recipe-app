@@ -3,16 +3,16 @@ import { Skeleton } from "@mui/material";
 import './IndianFood.css';
 
 const IndianFood = () => {
-    const API_KEY = 'YOUR_API_KEY_HERE';  // Replace with your actual API key
+    const API_KEY = '81bdc134fb73435fbb14311ed16cb557';  // Replace with your actual API key
     const [indianFood, setIndianFood] = useState([]);
-    const [loading, setLoading] = useState(true);  // State for loading
-    const [error, setError] = useState(null);  // State for error handling
+    const [loading, setLoading] = useState(true);  
+    const [error, setError] = useState(null);  
 
     const getIndianFood = async () => { 
         const check = localStorage.getItem('indianFood');
         if (check) {
             setIndianFood(JSON.parse(check));
-            setLoading(false);  // Set loading to false when data is retrieved
+            setLoading(false);  
         } else {
             try {
                 const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=10&tags=indian`);
@@ -24,9 +24,9 @@ const IndianFood = () => {
                 setIndianFood(data.recipes);
             } catch (error) {
                 console.error("Error fetching Indian food recipes:", error);
-                setError("Failed to load recipes. Please try again later."); // Set error state
+                setError("Failed to load recipes. Please try again later."); 
             } finally {
-                setLoading(false);  // Always set loading to false after attempt
+                setLoading(false);  
             }
         }
     };
@@ -35,21 +35,19 @@ const IndianFood = () => {
         getIndianFood();
     }, []);
 
-    // Show skeleton loaders while fetching data
     if (loading) {
         const skeletonArray = Array.from({ length: 10 }, (_, index) => index);
         return (
             <div className="grid-container">
                 {skeletonArray.map((_, index) => (
                     <div key={index} className="recipe-card">
-                        <Skeleton height={200} width={300} />
+                        <Skeleton height={200} width={280} />
                     </div>
                 ))}
             </div>
         );
     }
 
-    // Display error message if there is an error
     if (error) {
         return (
             <div className="error-message">

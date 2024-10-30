@@ -1,0 +1,59 @@
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.category-container2 {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll */
+    white-space: nowrap; /* Ensure items stay in one line */
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+.category-card {
+    display: inline-flex; /* Inline flex to ensure items are in a line */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Adjust as necessary */
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+    border: 2px solid black; /* Black border around each card */
+    padding: 10px;
+
+}
+
+.category-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    background-color: black;
+    color: white;
+}
+
+.category-icon {
+    font-size: 30px; /* Adjust icon size */
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+    font-weight: bold; /* Make the text bold */
+}
+
+.category-container2::-webkit-scrollbar {
+    height: 10px; /* Custom scrollbar height */
+}
+
+.category-container2::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 5px; /* Round scrollbar thumb */
+}
+
+.category-container2::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Scrollbar track color */
+}

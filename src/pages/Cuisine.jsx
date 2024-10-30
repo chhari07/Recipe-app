@@ -13,10 +13,14 @@ const Cuisine = () => {
 
     const getCuisine = async (name) => {
         try {
+            setLoading(true);  // Reset loading state on each fetch
+            setError(null);  // Clear any previous errors
             const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&cuisine=${name}`);
+            
             if (!response.ok) {
-                throw new Error(`Error: ${response.statusText}`);
+                throw new Error(`Failed to fetch: ${response.statusText}`);
             }
+
             const recipe = await response.json();
             setCuisine(recipe.results);
         } catch (err) {
@@ -28,21 +32,22 @@ const Cuisine = () => {
     };
 
     useEffect(() => {
-        getCuisine(params.type);
+        if (params.type) {
+            getCuisine(params.type);
+        }
     }, [params.type]);
 
     if (loading) {
-        const number = Array.from({ length: 12 }, (_, i) => i + 1);
         return (
             <div className="cuisine-skeleton">
-                {number.map((data) => (
+                {Array.from({ length: 12 }).map((_, i) => (
                     <Skeleton 
-                        variant='rounded'
+                        variant="rounded"
                         width={300}
                         height={200}
-                        key={data}
-                        animation='wave'
-                        className='cuisine-skltn'
+                        key={i}
+                        animation="wave"
+                        className="cuisine-skltn"
                     />
                 ))}
             </div>
@@ -50,7 +55,7 @@ const Cuisine = () => {
     }
 
     if (error) {
-        return <div>Error fetching recipes: {error}</div>;
+        return <div className="error-message">Error fetching recipes: {error}</div>;
     }
 
     return (
@@ -60,7 +65,7 @@ const Cuisine = () => {
                     <RecipeCard data={data} key={data.id} />
                 ))
             ) : (
-                <p>No recipes found for {params.type} cuisine.</p>
+                <p className="no-recipes-message">No recipes found for {params.type} cuisine.</p>
             )}
         </div>
     );

@@ -8,16 +8,21 @@ import Recipe from "./Recipe";
 import Header from "../components/Header";
 import { Footer } from "../components/Fotter";
 
+import { Hero } from "../components/Hero";
+
+
 const Pages = () => {
 
     return (
         <Router>
             <Header />
+        
             <div className="pages-container">
+                
                 <Routes>
-                    <Route path="/" element={[<Search />, <Category />, <Home />]}></Route>
-                    <Route path="/cuisine/:type" element={[<Search />, <Category />, <Cuisine />]}></Route>
-                    <Route path="/searched/:search" element={[<Search />, <Category />, <Searched />]}></Route>
+                    <Route path="/" element={[ <Hero/>,<Search />, <Category />  , <Home />]}></Route>
+                    <Route path="/cuisine/:type" element={[<Search />, <Category />  , <Cuisine />]}></Route>
+                    <Route path="/searched/:search" element={[<Search />  , <Category />, <Searched />]}></Route>
                     <Route path="/searched/:search/recipe/:name" element={<Recipe />}></Route>
                     <Route path="/cuisine/:type/recipe/:name" element={<Recipe />}></Route>
                     <Route path="recipe/:name" element={<Recipe />}></Route>

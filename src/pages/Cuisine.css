@@ -3,6 +3,8 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 10px;
     margin-top: 40px;
+    margin-left: 60px;
+    margin-bottom: 10px;
 }
 
 .cuisine-skeleton {
@@ -25,8 +27,69 @@
 }
 
 @media (max-width: 480px) {
-    .cuisine-container,
+    .cuisine-container{
+        margin-right: 50px;
+    }
     .cuisine-skeleton {
         grid-template-columns: 1fr; /* Stack cards on top of each other on very small screens */
+     
     }
+   
+}
+
+.cuisine-skeleton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cuisine-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.cuisine-skltn {
+    margin: 10px;
+}
+
+.error-message,
+.no-recipes-message {
+    font-size: 1.2em;
+    color: #ff4d4d;
+    text-align: center;
+    margin-top: 50px;
+}
+.recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tags-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    color: #333;
 }

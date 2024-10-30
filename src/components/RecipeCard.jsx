@@ -1,28 +1,31 @@
 // RecipeCard.js
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled from "styled-components"; // Ensure styled is imported
 
 const RecipeCard = ({ data }) => {
     // Safety check to handle cases where data might be undefined
     if (!data) {
-        return <StyledCard>Loading...</StyledCard>; // or return null if you prefer not to show anything
+        return <StyledCard>Loading...</StyledCard>;
     }
 
     return (
-        <Link to={'/recipe/' + data.id}>
+        <Link to={`/recipe/${data.id}`}>
             <StyledCard>
-                <div className="image" style={{ backgroundImage: `url(${data.image})` }} />
+                <div
+                    className="image"
+                    style={{ backgroundImage: `url(${data.image})` }}
+                    aria-label={data.title} // For accessibility
+                />
                 <div className="content">
                     <span className="title">{data.title}</span>
-                    {/* Check if summary exists before trying to access its length */}
                     <p className="desc">
-                        {data.summary ? data.summary.length : 'No summary available'}
+                        {data.summary ? `${data.summary.slice(0, 100)}...` : 'No summary available'}
                     </p>
-                    <a className="action" href="#">
+                    <Link to={`/recipe/${data.id}`} className="action">
                         Find out more
                         <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    </Link>
                 </div>
             </StyledCard>
         </Link>
@@ -34,7 +37,7 @@ const StyledCard = styled.div`
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
+  border: 1px solid black;
   text-decoration: none;
 
   .image {
@@ -44,7 +47,7 @@ const StyledCard = styled.div`
     background-color: rgb(239, 205, 255);
     background-size: cover;
     background-position: center;
-    border-radius: 0.5rem 0.5rem 0 0; /* Rounded top corners */
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 
   .content {
@@ -81,11 +84,11 @@ const StyledCard = styled.div`
   }
 
   .action:hover {
-    background-color: #1d4ed8; /* Darken the button on hover */
+    background-color: #333;
   }
 
   .action span {
-    transition: .3s ease;
+    transition: transform 0.3s ease;
   }
 
   .action:hover span {

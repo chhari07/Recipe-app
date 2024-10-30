@@ -2,6 +2,7 @@ import './Search.css';
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { Hero } from './Hero';
 
 const Search = () => {
 
@@ -15,6 +16,8 @@ const Search = () => {
     }
 
     return (
+        <div>  
+        
         <div className="search-container">
             <form onSubmit={handleSubmit}>
                 <FaSearch />
@@ -25,6 +28,7 @@ const Search = () => {
                     onChange={handleInput}
                  />
             </form>
+        </div>
         </div>
     )
 }

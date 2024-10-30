@@ -1,5 +1,6 @@
 .indian-food-container {
     padding: 20px;
+    
 }
 
 .grid-container {
@@ -38,7 +39,7 @@
 
 .recipe-button {
     padding: 8px 12px;
-    background-color: #007bff;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 4px;
@@ -52,4 +53,34 @@
 .error-message {
     text-align: center;
     color: red;
+}
+.indian-food-container {
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.grid-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;  /* Ensures smooth scrolling for each card */
+}
+
+.recipe-card {
+    min-width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;  /* Keeps each card centered when scrolled */
+}
+
+.recipe-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.recipe-content {
+    padding: 10px;
+    text-align: center;
 }

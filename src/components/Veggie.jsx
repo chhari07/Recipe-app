@@ -48,12 +48,16 @@ const Veggie = () => {
 
     return (
         <div className="veggie-container">
-            <h1 className=" font-extrabold text-4xl   mb-4  ">Veggie Picks</h1>
+<h1 className="font-extrabold text-4xl mb-5 lg:ml-[500px] md:ml-[200px] sm:ml-[50px] text-center sm:text-left">
+  Veggie Picks
+</h1>
+
+
             <Splide options={{
                 perPage: 4,
                 breakpoints: {
                     1024: { perPage: 3 },
-                    768: { perPage: 2 },
+                    768: { perPage: 2 }, 
                     480: { perPage: 1 },
                 },
                 pagination: false,
